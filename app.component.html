@@ -1,0 +1,12 @@
+
+
+<div class="container d-flex align-items-center flex-column">
+  <h1 class="h1">Chess</h1>
+  <div>
+    <div [class.dark]="dark" class="d-flex row" *ngFor="let row of board">
+      <div class="dark d-flex justify-content-center align-items-center square" style="width: 40px; height: 40px"
+           *ngFor="let square of row">{{square}}</div>
+    </div>
+  </div>
+  <button (click)="dark = !dark" id="button" class="btn btn-primary m-2">Dark Mode</button>
+</div>
